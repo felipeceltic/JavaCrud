@@ -3,7 +3,6 @@ public class produto {
   private String desc;
   private int cod;
 
-
   public String getDesc() {
     return this.desc;
   }
