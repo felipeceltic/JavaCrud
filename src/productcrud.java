@@ -46,6 +46,25 @@ public class productcrud {
         }
     }
 
+    public static void atualiza(produto produto) throws SQLException {
+
+        java.sql.Connection conn = connectDAO.conectaBD();
+        String sql = "UPDATE * from produto where cod like ?";
+
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Qual o código?");
+            int cod = scan.nextInt();
+            stmt.setInt(1, cod);
+            stmt.execute();
+            scan.close();
+
+        } catch (SQLException u) {
+            System.out.println("Código não encontrado!");
+            throw new RuntimeException(u);
+        }
+    }
+
     public static void consulta(produto produto) throws SQLException {
 
         java.sql.Connection conn = connectDAO.conectaBD();
