@@ -1,20 +1,11 @@
 import java.sql.Timestamp;
 
-public class produto {
-
-  private String desc;
+public class forn {
   private int cod;
-  private int forn_cod;
+  private String name;
   private Timestamp datacad;
   private Timestamp dataatu;
 
-  public String getDesc() {
-    return this.desc;
-  }
-
-  public void setDesc(String desc) {
-    this.desc = desc;
-  }
 
   public int getCod() {
     return this.cod;
@@ -22,6 +13,14 @@ public class produto {
 
   public void setCod(int cod) {
     this.cod = cod;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   public Timestamp getDatacad() {
@@ -39,15 +38,5 @@ public class produto {
   public void setDataatu(Timestamp dataatu) {
     this.dataatu = dataatu;
   }
-
-
-  public int getForn_cod() {
-    return this.forn_cod;
-  }
-
-  public void setForn_cod(int forn_cod) {
-    this.forn_cod = forn_cod;
-  }
-
 
 }

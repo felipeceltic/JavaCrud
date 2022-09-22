@@ -1,7 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class connectDAO {
+public class conectaBD {
 
   public static Connection conectaBD() {
     
